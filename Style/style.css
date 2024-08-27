@@ -9,7 +9,7 @@
     background-color: #E02C6D;
     border-radius: 41px ;
     border: 0px;
-    padding: 10px 24px 10px 30px;
+    padding: 10px 20px 10px 40px;
     color: white;
     font-weight: 600;
     font-size: 1rem;
@@ -61,12 +61,71 @@ nav ul li>a{
 }
 .banner-description{
     color: var(--primary-color);
-    width: 70%;
     margin-top: 0;
     font-weight: 600;
+    padding-right: 40%;
 }
 .sponsors-img{
     margin-top: 80px;
     display: flex;
     justify-content: center;
+}
+
+
+/* Responsiveness */
+/* small device */
+@media screen and (max-width:576px) {
+    *{
+        margin: 15px auto;
+        box-sizing: border-box;
+    }
+    .nav-container{
+        flex-direction: column;
+    }
+    .nav-container .nav-link{
+        display: none;
+    }
+    .banner-container{
+        flex-direction: column-reverse;
+        background-position: top;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+
+    }
+    .banner-container img{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .banner-head{
+        margin-top: 50px;
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .banner-description{
+        padding: 0 20PX;
+    } 
+    .sponsors-img{
+        flex-direction: column;
+    }
+}
+
+/* medium device */
+@media screen and (min-width: 576px) and (max-width:1024PX){
+    *{
+        margin: 15px;
+        box-sizing: border-box;
+    }
+    .banner-container{
+        flex-direction: column-reverse;
+        background-position: top;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .banner-description{
+        padding: 0 20%;
+    }   
 }
